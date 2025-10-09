@@ -4,12 +4,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    alumnos = ["Jan Perez", "Roberto Linares", "Sandra Cuevas"]
-    return render_template("index.html",creador="Alexander Pascual Chapol",nombres = alumnos)
+    return render_template("base.html")
 
-@app.route("/crearcuenta")
-def crear_cuenta():
-    return render_template("crearcuenta.html")
+@app.route("/base")
+def base():
+    return render_template("base.html")
+
+@app.route("/contenido")
+def contenido():
+    return render_template("contenido.html")
+
 
 if __name__=="__main__":
     app.run(debug=True)
