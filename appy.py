@@ -2,17 +2,15 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/contenido")
-def index():
-    return render_template("base.html")
 
-@app.route("/base")
+
+@app.route("/")
 def base():
     return render_template("base.html")
 
-@app.route("/contenido")
-def contenido():
-    return render_template("contenido.html")
+@app.route("/formulario")
+def formulario():
+    return render_template("formulario.html")
 
 
 if __name__=="__main__":
